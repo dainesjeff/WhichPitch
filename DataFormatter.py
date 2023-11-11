@@ -22,7 +22,8 @@ while(1):
    ret, frame = cap.read(0)
    if frame is not None:
        gray_image = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-       frames.append(gray_image)
+       resized_gray_image = cv2.resize(gray_image, (0, 0), fx = config["FrameScaleFactor"], fy =config["FrameScaleFactor"])
+       frames.append(resized_gray_image)
    if cv2.waitKey(1) & 0xFF == ord('q') or ret==False :
        cap.release()
        break
