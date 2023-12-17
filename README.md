@@ -1,1 +1,1 @@
-A resnet based transformer for video information.
+A resnet based encoder/decoder for video information.
